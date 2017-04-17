@@ -1,0 +1,15 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-title>气象</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <button menuClose ion-item icon-left *ngFor="let p of pages" (click)="openPage(p)">
+                <ion-icon [name]="p.icon" color="primary" item-left></ion-icon>{{p.title}}
+        </button>
+    </ion-content>
+
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

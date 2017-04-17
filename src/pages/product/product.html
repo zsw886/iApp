@@ -1,0 +1,80 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>产品</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-card>
+        <img src="assets/img/eva.jpg" />
+        <ion-card-content class="content-title content-text">
+            <h2> 农业气象评价
+            </h2>
+            <div>
+                主要包括作物长势监测、作物生长气象条件评估和土壤水分监测评价分析等内容。
+            </div>
+        </ion-card-content>
+
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="danger" icon-left (click)="openPage(event,item)">
+                  <ion-icon name='calendar'></ion-icon>
+                  作物长势
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button clear small color="danger" icon-left>
+                  <ion-icon name='calendar'></ion-icon>
+                   气象评估
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button clear small color="danger" icon-left>
+                  <ion-icon name='calendar'></ion-icon>
+                    墒情监测
+                </button>
+            </ion-col>
+
+        </ion-row>
+    </ion-card>
+    <ion-card>
+        <img src="assets/img/dis.jpg" />
+        <ion-card-content class="content-title2 content-text">
+            <h2>
+                农业气象灾害
+            </h2>
+            <div>
+                主要包括农业干旱、渍害、低温冷害、霜冻、冻害、高温热害、干热风等农业气象灾害的实时监测、预报等内容。
+            </div>
+        </ion-card-content>
+
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="danger" icon-left>
+                  <ion-icon name='calendar'></ion-icon>
+                  干旱
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button clear small color="danger" icon-left>
+                  <ion-icon name='calendar'></ion-icon>
+                    渍害
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button clear small color="danger" icon-left>
+                  <ion-icon name='calendar'></ion-icon>
+                    低温冷害
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button clear small color="danger" icon-left>
+                  <ion-icon name='calendar'></ion-icon>
+                    霜冻
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+</ion-content>

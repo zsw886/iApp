@@ -1,0 +1,121 @@
+page-home {
+    .content-background-page {
+        .content-local {
+            position: absolute;
+            text-align: center;
+            top: 3%;
+            font-size: 0.8em;
+            width: 20%;
+            color: #fff;
+        }
+        .content-public {
+            position: absolute;
+            text-align: right;
+            top: 3%;
+            font-size: 0.8em;
+            width: 95%;
+            color: #ccc;
+        }
+        .content-icon {
+            position: absolute;
+            text-align: center;
+            top: 6%;
+            font-size: 5.0em;
+            width: 100%;
+            color: #fff;
+        }
+        .content-title {
+            position: absolute;
+            text-align: center;
+            top: 25%;
+            font-size: 3.0em;
+            width: 100%;
+            color: #fff;
+        }
+        .content-subicon1 {
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            color: #fff;
+        }
+        .content-subicon2 {
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            color: #fff;
+        }
+        .content-subtitle {
+            font-size: 0.8em;
+            position: absolute;
+            text-align: center;
+            top: 36%;
+            width: 100%;
+            color: #fff;
+        }
+        .content-subtitle2 {
+            font-size: 0.8em;
+            position: absolute;
+            text-align: center;
+            top: 40%;
+            width: 100%;
+            color: #fff;
+        }
+        .content-grid {
+            font-size: 0.8em;
+            position: absolute;
+            text-align: center;
+            top: 36%;
+            width: 100%;
+        }
+        .content-card {
+            position: absolute;
+            top: 50%;
+            font-size: 0.8em;
+            width: 93%;
+            color: transparent;
+        }
+        .content-crop {
+            position: absolute;
+            top: 48%;
+            width: 100%;
+            color: #fff;
+            background-color: #387ef5;
+            opacity: 0.8;
+        }
+        .line {
+            height: 1px;
+            border: none;
+            border-top: 1px dashed #ccc;
+        }
+        .text-smaller {
+            font-size: 0.8em;
+        }
+        .text-context {
+            font-size: 0.8em;
+            margin-bottom: 5px
+        }
+        p {
+            margin: 2px 0
+        }
+        .text-right {
+            color: #ccc;
+            font-size: 0.8em;
+            text-align: right;
+        }
+        .content-forcast {
+            position: absolute;
+            top: 72%;
+            width: 100%;
+            color: #fff;
+            background-color: #387ef5;
+            opacity: 0.8;
+        }
+        .forcast-icon {
+            position: relative;
+            top: 6%;
+            font-size: 2.0em;
+            width: 100%;
+            color: #fff;
+        }
+    }
+}
