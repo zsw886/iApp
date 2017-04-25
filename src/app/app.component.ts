@@ -4,7 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { BaiduMapPage } from '../pages/baidu-map/baidu-map';
-import { ProductEvaPage } from '../pages/product-eva/product-eva';
+import { GeolocationPage } from '../pages/geolocation/geolocation.page';
 
 @Component({
   templateUrl: 'app.html'
@@ -32,7 +32,7 @@ export class MyApp {
     this.initializeApp();
 
     this.pages = [
-      { title: '农业气象评价', icon: 'md-map', component: ProductEvaPage },
+      { title: '定位', icon: 'locate', component: GeolocationPage },
       { title: '地图浏览', icon: 'md-map', component: BaiduMapPage }
     ];
   }

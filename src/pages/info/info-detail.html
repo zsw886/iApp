@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+            详细资讯
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+
+        <ion-item>
+            <!--<ion-avatar item-left>
+                <img src="{{selectedNews.image}}">
+            </ion-avatar>-->
+            <h1>{{selectedNews.title}}</h1>
+            <p class="text-date">{{selectedNews.rdate}}</p>
+        </ion-item>
+
+        <img src="{{selectedNews.srcimg}}">
+
+        <ion-card-content>
+            <p>{{selectedNews.description}}</p>
+        </ion-card-content>
+
+        <ion-row>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                    <ion-icon name="thumbs-up"></ion-icon>
+                      <div>12 喜欢</div>
+                </button>
+            </ion-col>
+            <ion-col>
+                <button ion-button icon-left clear small>
+                            <ion-icon name="text"></ion-icon>
+                            <div>4 评论</div>
+                </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+</ion-content>

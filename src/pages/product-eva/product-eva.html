@@ -30,38 +30,36 @@
 
 
 <ion-content padding>
-    <div [ngSwitch]="product">
+    <div [ngSwitch]="product" class="card-background-page">
         <ion-list *ngSwitchCase="'month'">
-            <ion-card>
+            <ion-card *ngFor="let item of items" (click)="itemTapped($event, item)">
+                <img src="assets/images/eva/meteo/day/{{item.image}}" />
+                <div class="card-title">{{item.title}}</div>
+            </ion-card>
+            <!--<ion-card>
                 <img src="assets/images/eva/meteo/day/2017/01/29/prec.jpg" />
                 <div class="card-title">降水量要素</div>
-                <div class="card-subtitle">41 Listings</div>
             </ion-card>
             <ion-card>
                 <img src="assets/images/eva/meteo/day/2017/01/29/prec_a.jpg" />
                 <div class="card-title">降水距平要素</div>
-                <div class="card-subtitle">28 Listings</div>
             </ion-card>
             <ion-card>
                 <img src="assets/images/eva/meteo/day/2017/01/29/temp.jpg" />
                 <div class="card-title">平均气温要素</div>
-                <div class="card-subtitle">64 Listings</div>
             </ion-card>
             <ion-card>
                 <img src="assets/images/eva/meteo/day/2017/01/29/temp_a.jpg" />
                 <div class="card-title">气温距平要素</div>
-                <div class="card-subtitle">28 Listings</div>
             </ion-card>
             <ion-card>
                 <img src="assets/images/eva/meteo/day/2017/01/29/sun.jpg" />
                 <div class="card-title">日照时数要素</div>
-                <div class="card-subtitle">72 Listings</div>
             </ion-card>
             <ion-card>
                 <img src="assets/images/eva/meteo/day/2017/01/29/sun_a.jpg" />
                 <div class="card-title">日照时数距平要素</div>
-                <div class="card-subtitle">28 Listings</div>
-            </ion-card>
+            </ion-card>-->
 
         </ion-list>
 

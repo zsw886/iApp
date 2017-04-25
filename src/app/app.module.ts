@@ -9,6 +9,10 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { BaiduMapPage } from '../pages/baidu-map/baidu-map';
 import { ProductEvaPage } from '../pages/product-eva/product-eva';
+import { ItemDetailsPage } from '../pages/product-eva/item-details';
+import { Gallery } from '../models/gallery';
+import { InfoDetailPage } from '../pages/info/info-detail';
+import { GeolocationPage } from '../pages/geolocation/geolocation.page';
 
 
 @NgModule({
@@ -21,6 +25,10 @@ import { ProductEvaPage } from '../pages/product-eva/product-eva';
     ProductPage,
     BaiduMapPage,
     ProductEvaPage,
+    ItemDetailsPage,
+    InfoDetailPage,
+    GeolocationPage,
+    //Gallery,
     TabsPage
   ],
   imports: [
@@ -36,8 +44,12 @@ import { ProductEvaPage } from '../pages/product-eva/product-eva';
     HomePage,
     BaiduMapPage,
     ProductEvaPage,
+    ItemDetailsPage,
+    InfoDetailPage,
+    GeolocationPage,
+    
     TabsPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler},{provide: Gallery, useClass: IonicErrorHandler}]
 })
 export class AppModule {}

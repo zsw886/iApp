@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, MenuController,ToastController } from 'ionic-angular';
 import { Platform } from 'ionic-angular';
+import { ItemDetailsPage } from '../product-eva/item-details';
+import { Gallery } from '../../models/gallery';
+
 /*
   Generated class for the ProductEva page.
 
@@ -9,50 +12,29 @@ import { Platform } from 'ionic-angular';
 */
 @Component({
   selector: 'page-product-eva',
+  providers: [Gallery],
   templateUrl: 'product-eva.html'
 })
 export class ProductEvaPage {
-
   product: string = "month";
+  items: any;
+  
 
-products = [
-    {
-      title: "降水量要素",
-      description: "",
-      image: "assets/images/eva/meteo/day/2017/01/29/prec.jpg",
-    },
-    {
-      title: "降水距平要素",
-      description: "",
-      image: "assets/images/eva/meteo/day/2017/01/29/prec_a.jpg",
-    },
-    {
-      title: "平均气温要素",
-      description: "",
-      image: "assets/images/eva/meteo/day/2017/01/29/temp.jpg",
-    },
-    {
-      title: "气温距平要素",
-      description: "",
-      image: "assets/images/eva/meteo/day/2017/01/29/temp_a.jpg",
-    },
-    {
-      title: "照时数要素",
-      description: "",
-      image: "assets/images/eva/meteo/day/2017/01/29/sun.jpg",
-    },
-    {
-      title: "日照时数距平要素",
-      description: "",
-      image: "assets/images/eva/meteo/day/2017/01/29/sun_a.jpg",
-    }
-  ];
 
-constructor(public navCtrl: NavController, public menuCtrl: MenuController) {
+constructor(public navCtrl: NavController, public menuCtrl: MenuController,public gallery: Gallery) {
     this.menuCtrl.swipeEnable(false);
+    this.items = gallery.items;
+    console.log(this.items[0]);
   }
 
 ionViewWillLeave() {
     this.menuCtrl.swipeEnable(true);
   }
+
+itemTapped(event, item) {
+    this.navCtrl.push(ItemDetailsPage, {
+      item: item
+    });
+  }
+
 }
