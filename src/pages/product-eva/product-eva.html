@@ -32,10 +32,10 @@
 <ion-content padding>
     <div [ngSwitch]="product" class="card-background-page">
         <ion-list *ngSwitchCase="'month'">
-            <ion-card *ngFor="let item of items" (click)="itemTapped($event, item)">
+            <!--<ion-card *ngFor="let item of items" (click)="itemTapped($event, item)">
                 <img src="assets/images/eva/meteo/day/{{item.image}}" />
                 <div class="card-title">{{item.title}}</div>
-            </ion-card>
+            </ion-card>-->
             <!--<ion-card>
                 <img src="assets/images/eva/meteo/day/2017/01/29/prec.jpg" />
                 <div class="card-title">降水量要素</div>

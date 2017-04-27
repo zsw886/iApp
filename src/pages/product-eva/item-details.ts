@@ -4,12 +4,14 @@ import {NavController,  NavParams} from 'ionic-angular';
 import {Transfer } from 'ionic-native';
 import {ActionSheetController} from 'ionic-angular';
 import { Gallery } from '../../models/gallery';
+//import { SurfService } from "../../service/services";
 
 // 定义cordova
 declare var cordova: any;
 
 @Component({
-  selector: 'item-details', providers: [Gallery],
+  selector: 'item-details',
+  providers :[Gallery],//SurfService,
   templateUrl: 'item-details.html'
 })
 export class ItemDetailsPage {
@@ -24,6 +26,7 @@ export class ItemDetailsPage {
   constructor(
     public navCtrl: NavController,
     public actionSheetCtrl: ActionSheetController,
+    //public surfService: SurfService,
     navParams: NavParams,public gallery: Gallery) {
 
     //this.selectedItem = navParams.get('item');
@@ -31,11 +34,11 @@ export class ItemDetailsPage {
   }
 
   // 获取图片集合
-/*  getDetails() {
-    this.sexyService.getDetails(this.selectedItem.id).subscribe(data => {
-      this.items = data;
-    })
-  }*/
+//  getDetails() {
+//     this.surfService.getLastSurf().then(data => {
+//       this.items = data;
+//     })
+//   }
 
   // 点击图片时
   itemTapped(event, item) {

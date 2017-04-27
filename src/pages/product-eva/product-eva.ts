@@ -3,6 +3,7 @@ import { NavController, MenuController,ToastController } from 'ionic-angular';
 import { Platform } from 'ionic-angular';
 import { ItemDetailsPage } from '../product-eva/item-details';
 import { Gallery } from '../../models/gallery';
+import { SurfService } from "../../service/services";
 
 /*
   Generated class for the ProductEva page.
@@ -12,7 +13,7 @@ import { Gallery } from '../../models/gallery';
 */
 @Component({
   selector: 'page-product-eva',
-  providers: [Gallery],
+  providers: [SurfService,Gallery],
   templateUrl: 'product-eva.html'
 })
 export class ProductEvaPage {
@@ -21,9 +22,13 @@ export class ProductEvaPage {
   
 
 
-constructor(public navCtrl: NavController, public menuCtrl: MenuController,public gallery: Gallery) {
+constructor(public navCtrl: NavController, 
+  public menuCtrl: MenuController,
+  public surfService: SurfService,
+  public gallery: Gallery) {
     this.menuCtrl.swipeEnable(false);
     this.items = gallery.items;
+    //let ss = this.surfService.getLastSurf();
     console.log(this.items[0]);
   }
 
